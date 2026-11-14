@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.1)
-project(SfmlLearn LANGUAGES CXX)
+project(SnakeGame LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -12,12 +12,13 @@ FetchContent_Declare(SFML
         GIT_TAG 3.1.0
         GIT_SHALLOW ON
         EXCLUDE_FROM_ALL
-        SYSTEM)
+        SYSTEM
+)
 FetchContent_MakeAvailable(SFML)
 
 add_executable(SnakeGame
         src/SnakeMain.cpp
-        )
+)
 
 target_include_directories(SnakeGame PRIVATE
         ${CMAKE_SOURCE_DIR}/includes
